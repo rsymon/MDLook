@@ -158,9 +158,9 @@ final class AppDelegate: NSResponder,
         self.tabManager.buttons.append(self.infoButton)
         self.tabManager.buttons.append(self.settingsButton)
         self.tabManager.buttons.append(self.feedbackButton)
-        self.infoButton.toolTip = "About PreviewMarkdown 2"
+        self.infoButton.toolTip = "About MDLook"
         self.settingsButton.toolTip = "Set preview styles and content"
-        self.feedbackButton.toolTip = "Send feedback to the developer"
+        self.feedbackButton.toolTip = "Feedback is disabled in this local fork"
         self.infoButton.alphaValue = 1.0
         self.settingsButton.alphaValue = 1.0
         self.feedbackButton.alphaValue = 1.0
@@ -321,7 +321,7 @@ final class AppDelegate: NSResponder,
         } else if item == self.helpMenuAppStoreRating {
             path = BUFFOON_CONSTANTS.APP_STORE_URLS.PM + "?action=write-review"
         } else if item == self.helpMenuOnlineHelp {
-            path += "#how-to-use-previewmarkdown"
+            path = BUFFOON_CONSTANTS.URL_MAIN
         } else if item == self.helpMenuOthersPreviewCode {
             path = BUFFOON_CONSTANTS.APP_STORE_URLS.PC
         } else if item == self.helpMenuOthersPreviewJson {

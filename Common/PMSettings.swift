@@ -23,7 +23,7 @@ class PMSettings {
     var fontSize: CGFloat                   = CGFloat(BUFFOON_CONSTANTS.PREVIEW_SIZE.FONT_SIZE)
     var lineSpacing: CGFloat                = BUFFOON_CONSTANTS.PREVIEW_SIZE.LINE_SPACING
     // FROM 2.1.0
-    var doShowMargin: Bool                  = false
+    var doShowMargin: Bool                  = true
     var displayColours: [String: String]    = [
         BUFFOON_CONSTANTS.COLOUR_IDS.HEADS:     BUFFOON_CONSTANTS.HEX_COLOUR.HEAD,
         BUFFOON_CONSTANTS.COLOUR_IDS.CODE:      BUFFOON_CONSTANTS.HEX_COLOUR.CODE,
@@ -33,7 +33,7 @@ class PMSettings {
         BUFFOON_CONSTANTS.COLOUR_IDS.LOZENGE:   BUFFOON_CONSTANTS.HEX_COLOUR.LOZENGE                // Advanced
     ]
     // FROM 2.3.0
-    var previewWindowScale: CGFloat         = BUFFOON_CONSTANTS.SCALERS.WINDOW_SIZE_L               // Advanced
+    var previewWindowScale: CGFloat         = BUFFOON_CONSTANTS.SCALERS.WINDOW_SIZE_M               // Advanced
     var previewMarginWidth: CGFloat         = BUFFOON_CONSTANTS.PREVIEW_SIZE.PREVIEW_MARGIN_WIDTH   // Advanced
     var thumbnailMatchFinderMode: Bool      = false                                                 // Advanced
 
@@ -254,7 +254,7 @@ class PMSettings {
 
             // Preview window scale factor (fraction of main screen size)
             if defaults.object(forKey: BUFFOON_CONSTANTS.PREFS_IDS.PREVIEW_WINDOW_SCALE) == nil {
-                defaults.setValue(BUFFOON_CONSTANTS.SCALERS.WINDOW_SIZE_L, forKey: BUFFOON_CONSTANTS.PREFS_IDS.PREVIEW_WINDOW_SCALE)
+                defaults.setValue(BUFFOON_CONSTANTS.SCALERS.WINDOW_SIZE_M, forKey: BUFFOON_CONSTANTS.PREFS_IDS.PREVIEW_WINDOW_SCALE)
             }
 
             // Preview inset margin width

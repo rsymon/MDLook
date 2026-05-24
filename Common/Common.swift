@@ -94,7 +94,7 @@ final internal class Common {
         }
 
         // Set paragraph spacing
-        styler.paraSpacing = self.settings.fontSize * 1.4
+        styler.paraSpacing = self.settings.fontSize * 0.9
 
         // FROM 1.3.0
         // Set the front matter key:value fonts and sizes

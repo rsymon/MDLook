@@ -669,7 +669,7 @@ class PMStyler {
      Extract a URL or path embedded in an IMG SRC tag.
 
      - Parameters
-         - tag: The full token, eg. `img class="img-fluid" src="/Users/smitty/emu/monitor_main.png" alt="An image"`
+         - tag: The full token, eg. `img class="img-fluid" src="/Users/example/image.png" alt="An image"`
 
      - Returns The embedded path.
      */
@@ -920,7 +920,7 @@ class PMStyler {
         // Make the table's single cell
         let paragraphBlock = NSTextTableBlock(table: paragraphTable, startingRow: 0, rowSpan: 1, startingColumn: 0, columnSpan: 1)
         paragraphBlock.backgroundColor = .previewCode
-        paragraphBlock.setWidth(8.0, type: .absoluteValueType, for: .padding)
+        paragraphBlock.setWidth(12.0, type: .absoluteValueType, for: .padding)
         return paragraphBlock
     }
 
@@ -1071,11 +1071,19 @@ class PMStyler {
 
         let quoteParaStyle: NSMutableParagraphStyle     = NSMutableParagraphStyle()
         quoteParaStyle.lineSpacing                      = self.settings!.lineSpacing
-        quoteParaStyle.paragraphSpacing                 = self.paraSpacing * 2.0
-        quoteParaStyle.alignment                        = .right
-        quoteParaStyle.paragraphSpacingBefore           = self.paraSpacing
+        quoteParaStyle.paragraphSpacing                 = self.paraSpacing
+        quoteParaStyle.alignment                        = .left
+        quoteParaStyle.paragraphSpacingBefore           = self.paraSpacing * 0.75
         quoteParaStyle.headIndent                       = BUFFOON_CONSTANTS.INSET.BLOCK
-        quoteParaStyle.firstLineHeadIndent              = BUFFOON_CONSTANTS.INSET.LIST
+        quoteParaStyle.firstLineHeadIndent              = BUFFOON_CONSTANTS.INSET.BLOCK
+        let quoteTable: NSTextTable                     = NSTextTable()
+        quoteTable.numberOfColumns                      = 1
+        quoteTable.collapsesBorders                     = true
+        let quoteBlock: NSTextTableBlock                = NSTextTableBlock(table: quoteTable, startingRow: 0, rowSpan: 1, startingColumn: 0, columnSpan: 1)
+        quoteBlock.setWidth(4.0, type: .absoluteValueType, for: .border, edge: .minX)
+        quoteBlock.setWidth(12.0, type: .absoluteValueType, for: .padding)
+        quoteBlock.setBorderColor(self.colours.quote.withAlphaComponent(0.75))
+        quoteParaStyle.textBlocks                       = [quoteBlock]
         self.paragraphs["quote"]                        = quoteParaStyle
 
         // Nested list
@@ -1169,7 +1177,7 @@ class PMStyler {
                                        .paragraphStyle: self.paragraphs["tabbed"]!]
 
         self.styles["blockquote"]   = [.foregroundColor: self.colours.quote,
-                                       .font: makeFont("strong", self.settings!.fontSize * BUFFOON_CONSTANTS.MULTIPLIER.BLOCK),
+                                       .font: makeFont("em", self.settings!.fontSize * BUFFOON_CONSTANTS.MULTIPLIER.BLOCK),
                                        .paragraphStyle: self.paragraphs["quote"]!]
 
         self.styles["li"]           = [.foregroundColor: self.colours.body,
@@ -1201,7 +1209,8 @@ class PMStyler {
 
         // Can't make the body font? Default to System
         if bodyFont == nil {
-            bodyFont = NSFont.systemFont(ofSize: self.settings!.fontSize)
+            bodyFont = firstAvailableFont(BUFFOON_CONSTANTS.FONT_NAME.BODY_FALLBACKS, self.settings!.fontSize)
+            ?? NSFont.systemFont(ofSize: self.settings!.fontSize)
         }
 
         self.bodyFontFamily.displayName = bodyFont?.familyName ?? self.settings!.bodyFontName
@@ -1278,6 +1287,11 @@ class PMStyler {
                     return font
                 }
 
+                if let font: NSFont = firstAvailableFont(BUFFOON_CONSTANTS.FONT_NAME.CODE_FALLBACKS, size) {
+                    recordFont(requiredStyle, size, font)
+                    return font
+                }
+
                 let font: NSFont = NSFont.monospacedSystemFont(ofSize: size, weight: NSFont.Weight(5.0))
                 recordFont(requiredStyle, size, font)
                 return font
@@ -1292,10 +1306,30 @@ class PMStyler {
             return font
         }
 
+        if let font: NSFont = firstAvailableFont(BUFFOON_CONSTANTS.FONT_NAME.BODY_FALLBACKS, size) {
+            recordFont(requiredStyle, size, font)
+            return font
+        }
+
         // Still no joy? Fall right back to the system font
         let font: NSFont = NSFont.systemFont(ofSize: size)
         recordFont(requiredStyle, size, font)
         return font
+    }
+
+
+    /**
+     Return the first installed font from an ordered PostScript-name list.
+     */
+    internal func firstAvailableFont(_ names: [String], _ size: CGFloat) -> NSFont? {
+
+        for name in names {
+            if let font = NSFont(name: name, size: size) {
+                return font
+            }
+        }
+
+        return nil
     }
 
 

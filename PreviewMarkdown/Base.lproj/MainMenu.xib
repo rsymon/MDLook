@@ -68,9 +68,9 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="PreviewMarkdown" id="1Xt-HY-uBw">
+                <menuItem title="MDLook" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="PreviewMarkdown" systemMenu="apple" autoenablesItems="NO" id="uQy-DD-JDr">
+                    <menu key="submenu" title="MDLook" systemMenu="apple" autoenablesItems="NO" id="uQy-DD-JDr">
                         <items>
                             <menuItem title="Settings..." image="gearshape.fill" catalog="system" keyEquivalent="," id="t9y-p4-apt">
                                 <connections>
@@ -90,7 +90,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                            <menuItem title="Hide PreviewMarkdown" keyEquivalent="h" id="Olw-nP-bQN">
+                            <menuItem title="Hide MDLook" keyEquivalent="h" id="Olw-nP-bQN">
                                 <connections>
                                     <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
                                 </connections>
@@ -108,7 +108,7 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                            <menuItem title="Quit PreviewMarkdown" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit MDLook" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="doClose:" target="Voe-Tx-rLC" id="r4e-pI-oPR"/>
                                 </connections>
@@ -283,7 +283,7 @@
             </items>
             <point key="canvasLocation" x="-3" y="-864"/>
         </menu>
-        <window title="LEGACY PreviewMarkdown" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="LEGACY MDLook" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="610" height="432"/>
@@ -311,7 +311,7 @@
                         </constraints>
                         <textFieldCell key="cell" allowsUndo="NO" alignment="center" id="ztO-7G-jpz">
                             <font key="font" metaFont="system"/>
-                            <string key="title">PreviewMarkdown provides QuickLook previews and icon thumbnails for Markdown files.  Run this app once to register its Previewer and Thumbnailer application extensions, which you can then manage in System Preferences &gt; Extensions &gt; Quick Look</string>
+                            <string key="title">MDLook provides QuickLook previews and icon thumbnails for Markdown files.  Run this app once to register its Previewer and Thumbnailer application extensions, which you can then manage in System Preferences &gt; Extensions &gt; Quick Look</string>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -348,7 +348,7 @@ DQ
                         </constraints>
                         <textFieldCell key="cell" controlSize="mini" allowsUndo="NO" alignment="center" id="aj6-5q-zC1">
                             <font key="font" metaFont="menu" size="9"/>
-                            <string key="title">PreviewMarkdown © 2024, Tony Smith. Contains: MarkdownI © 2024, Simon Fairbairn; Highlightr © 2006-2024 Josh Goebel  and other contributors; YamlSwift © 2015 Behrang Noruzi Niya</string>
+                            <string key="title">MDLook © 2024, Tony Smith. Contains: MarkdownI © 2024, Simon Fairbairn; Highlightr © 2006-2024 Josh Goebel  and other contributors; YamlSwift © 2015 Behrang Noruzi Niya</string>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -1024,7 +1024,7 @@ DQ
             </view>
             <point key="canvasLocation" x="257" y="376"/>
         </window>
-        <window title="PreviewMarkdown 2" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="eiK-Wj-BIF">
+        <window title="MDLook 2" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="eiK-Wj-BIF">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="0.0" y="717" width="800" height="400"/>
@@ -1052,8 +1052,8 @@ DQ
                                             </constraints>
                                             <textFieldCell key="cell" controlSize="mini" allowsUndo="NO" alignment="left" id="JET-7P-X43">
                                                 <font key="font" metaFont="menu" size="9"/>
-                                                <string key="title">PreviewMarkdown © 2026, Tony Smith. 
-Contains Markdown-It © 2014-26 Vitaly Puzrin, Alex Kocharin; Highlight.js © 2006-26Josh Goebel and other contributors; YamlSwift © 2015 Behrang Noruzi Niya.</string>
+                                                <string key="title">MDLook fork. Original PreviewMarkdown source © 2026 Tony Smith.
+Contains Markdown-It © 2014-26 Vitaly Puzrin, Alex Kocharin; Highlight.js © 2006-26 Josh Goebel and other contributors; YamlSwift © 2015 Behrang Noruzi Niya.</string>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>

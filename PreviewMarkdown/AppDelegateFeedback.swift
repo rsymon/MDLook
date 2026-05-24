@@ -65,26 +65,10 @@ extension AppDelegate {
 
         let feedback: String = self.feedbackText.stringValue
         if !feedback.isEmpty  && !self.hasSentFeedback {
-            // FROM 2.4.1
-            // Use Swift Concurrency
-            // NOTE Use of Task and closure required because @IBAction functions
-            //      cannot be `async`, but we make an `await` call later on
-            Task { @MainActor in
-                // Start the connection indicator if it's not already visible,
-                // and block tab switching via menus
-                self.connectionProgress.startAnimation(self)
-                hidePanelGenerators()
-
-                // Post the feedback asynchronously
-                let error: FeedbackError = await self.nuSendFeedback(feedback)
-                self.connectionProgress.stopAnimation(self)
-                if error.code != .noError {
-                    // Error - inform the user
-                    presentFeedbackError(error)
-                } else {
-                    // No error - feedback sent successfully
-                    presentFeedbackSuccess()
-                }
+            let alert: NSAlert = makeAlert("Feedback Disabled",
+                                           "MDLook is a local fork and does not send feedback to any remote service.")
+            alert.beginSheetModal(for: self.window) { (resp) in
+                self.showPanelGenerators()
             }
         }
     }

@@ -31,26 +31,26 @@ struct BUFFOON_CONSTANTS {
             static let FILE_WONT_OPEN           = "Can't open file"
             static let BAD_MD_STRING            = "Can't get markdown data"
             static let BAD_TS_STRING            = "Can't access NSTextView's TextStorage"
-            static let BAD_STYLER_LOAD          = "App files could not be loaded. Please re-install PreviewMarkdown"
+        static let BAD_STYLER_LOAD          = "App files could not be loaded. Please re-install MDLook"
         }
     }
 
     // FROM 1.3.1
-    static let URL_MAIN                         = "https://smittytone.net/previewmarkdown/index.html"
-    static let SUITE_NAME                       = ".suite.previewmarkdown"
+    static let URL_MAIN                         = "https://github.com/smittytone/PreviewMarkdown"
+    static let SUITE_NAME                       = ".me.rsy42.mdlook"
     static let SAMPLE_UTI_FILE                  = "sample.md"
 
     // FROM 1.4.3
-    static let APP_CODE_PREVIEWER               = "com.bps.PreviewMarkdown.Previewer"
+    static let APP_CODE_PREVIEWER               = "me.rsy42.mdlook.preview"
     
     // FROM 1.4.6
     struct APP_STORE_URLS {
         
-        static let PM                           = "https://apps.apple.com/us/app/previewmarkdown/id1492280469"
-        static let PC                           = "https://apps.apple.com/us/app/previewcode/id1571797683"
-        static let PY                           = "https://apps.apple.com/us/app/previewyaml/id1564574724"
-        static let PJ                           = "https://apps.apple.com/us/app/previewjson/id6443584377"
-        static let PT                           = "https://apps.apple.com/us/app/previewtext/id1660037028"
+        static let PM                           = "https://github.com/smittytone/PreviewMarkdown"
+        static let PC                           = "https://github.com/smittytone/PreviewMarkdown"
+        static let PY                           = "https://github.com/smittytone/PreviewMarkdown"
+        static let PJ                           = "https://github.com/smittytone/PreviewMarkdown"
+        static let PT                           = "https://github.com/smittytone/PreviewMarkdown"
     }
     
     // FROM 1.5.0
@@ -58,25 +58,25 @@ struct BUFFOON_CONSTANTS {
 
     struct PREFS_IDS {
         
-        static let MAIN_WHATS_NEW               = "com-bps-previewmarkdown-do-show-whats-new-"
-        static let PREVIEW_BODY_FONT_SIZE       = "com-bps-previewmarkdown-base-font-size"
-        static let PREVIEW_BODY_FONT_NAME       = "com-bps-previewmarkdown-body-font-name"
-        static let PREVIEW_CODE_FONT_NAME       = "com-bps-previewmarkdown-code-font-name"
-        static let PREVIEW_USE_LIGHT            = "com-bps-previewmarkdown-do-use-light"
-        static let PREVIEW_SHOW_YAML            = "com-bps-previewmarkdown-do-show-front-matter"
-        static let PREVIEW_LINK_COLOUR          = "com-bps-previewmarkdown-link-colour-hex"
-        static let PREVIEW_CODE_COLOUR          = "com-bps-previewmarkdown-code-colour-hex"
-        static let PREVIEW_HEAD_COLOUR          = "com-bps-previewmarkdown-head-colour-hex"
-        static let PREVIEW_QUOTE_COLOUR         = "com-bps-previewmarkdown-quote-colour-hex"
-        static let PREVIEW_YAML_KEY_COLOUR      = "com-bps-previewmarkdown-yaml-key-colour-hex"
-        static let PREVIEW_LOZENGE_COLOUR       = "com-bps-previewmarkdown-lozenge-colour-hex"
-        static let PREVIEW_LINE_SPACE           = "com-bps-previewmarkdown-line-spacing"
-        static let THUMB_FONT_SIZE              = "com-bps-previewmarkdown-thumb-font-size"
-        static let THUMB_SHOW_TAG               = "com-bps-previewmarkdown-do-show-tag"
-        static let PREVIEW_SHOW_MARGIN          = "com-bps-previewmarkdown-do-show-margin"
-        static let PREVIEW_WINDOW_SCALE         = "com-bps-previewmarkdown-window-scale"
-        static let PREVIEW_MARGIN               = "com-bps-previewmarkdown-preview-margin"
-        static let THUMB_MATCH_MODE             = "com-bps-previewmarkdown-match-mode"
+        static let MAIN_WHATS_NEW               = "me-rsy42-mdlook-do-show-whats-new-"
+        static let PREVIEW_BODY_FONT_SIZE       = "me-rsy42-mdlook-base-font-size"
+        static let PREVIEW_BODY_FONT_NAME       = "me-rsy42-mdlook-body-font-name"
+        static let PREVIEW_CODE_FONT_NAME       = "me-rsy42-mdlook-code-font-name"
+        static let PREVIEW_USE_LIGHT            = "me-rsy42-mdlook-do-use-light"
+        static let PREVIEW_SHOW_YAML            = "me-rsy42-mdlook-do-show-front-matter"
+        static let PREVIEW_LINK_COLOUR          = "me-rsy42-mdlook-link-colour-hex"
+        static let PREVIEW_CODE_COLOUR          = "me-rsy42-mdlook-code-colour-hex"
+        static let PREVIEW_HEAD_COLOUR          = "me-rsy42-mdlook-head-colour-hex"
+        static let PREVIEW_QUOTE_COLOUR         = "me-rsy42-mdlook-quote-colour-hex"
+        static let PREVIEW_YAML_KEY_COLOUR      = "me-rsy42-mdlook-yaml-key-colour-hex"
+        static let PREVIEW_LOZENGE_COLOUR       = "me-rsy42-mdlook-lozenge-colour-hex"
+        static let PREVIEW_LINE_SPACE           = "me-rsy42-mdlook-line-spacing"
+        static let THUMB_FONT_SIZE              = "me-rsy42-mdlook-thumb-font-size"
+        static let THUMB_SHOW_TAG               = "me-rsy42-mdlook-do-show-tag"
+        static let PREVIEW_SHOW_MARGIN          = "me-rsy42-mdlook-do-show-margin"
+        static let PREVIEW_WINDOW_SCALE         = "me-rsy42-mdlook-window-scale"
+        static let PREVIEW_MARGIN               = "me-rsy42-mdlook-preview-margin"
+        static let THUMB_MATCH_MODE             = "me-rsy42-mdlook-match-mode"
     }
     
     // FROM 2.0.0
@@ -127,13 +127,13 @@ struct BUFFOON_CONSTANTS {
 
     struct MULTIPLIER {
 
-        static let H1                           = 2.6
-        static let H2                           = 2.2
-        static let H3                           = 1.8
-        static let H4                           = 1.4
-        static let H5                           = 1.2
-        static let H6                           = 1.2
-        static let BLOCK                        = 1.6
+        static let H1                           = 2.0
+        static let H2                           = 1.62
+        static let H3                           = 1.35
+        static let H4                           = 1.18
+        static let H5                           = 1.05
+        static let H6                           = 1.0
+        static let BLOCK                        = 1.0
         static let BASELINE_SHIFT               = 0.67
         static let SUB_OFFSET                   = -5.0
         static let SUPER_OFFSET                 = 10.0
@@ -141,18 +141,18 @@ struct BUFFOON_CONSTANTS {
 
     struct INSET {
 
-        static let LIST                         = 50.0
-        static let BLOCK                        = 50.0
+        static let LIST                         = 36.0
+        static let BLOCK                        = 24.0
         static let YAML                         = 2
     }
 
     struct HEX_COLOUR {
 
-        static let HEAD                         = "941751FF"
-        static let CODE                         = "00FF00FF"
-        static let LINK                         = "0096FFFF"
-        static let QUOTE                        = "22528EFF"
-        static let YAML                         = "009193FF"
+        static let HEAD                         = "1F6F78FF"
+        static let CODE                         = "B45309FF"
+        static let LINK                         = "0A84FFFF"
+        static let QUOTE                        = "5B6472FF"
+        static let YAML                         = "0E7490FF"
         static let LOZENGE                      = ""                // Advanced
     }
 
@@ -160,8 +160,8 @@ struct BUFFOON_CONSTANTS {
 
         static let FONT_SIZE                    = 16.0
         static let FONT_SIZE_OPTIONS: [CGFloat] = [10.0, 12.0, 14.0, 16.0, 18.0, 24.0, 28.0]
-        static let LINE_SPACING                 = 1.0
-        static let PREVIEW_MARGIN_WIDTH         = 16.0
+        static let LINE_SPACING                 = 1.35
+        static let PREVIEW_MARGIN_WIDTH         = 32.0
         static let PREVIEW_MARGIN_WIDTH_MIN     = 0
         static let PREVIEW_MARGIN_WIDTH_MAX     = 256
         static let PREVIEW_MARGIN_SIZE          = NSSize(width: PREVIEW_MARGIN_WIDTH, height: PREVIEW_MARGIN_WIDTH)
@@ -183,7 +183,17 @@ struct BUFFOON_CONSTANTS {
     struct FONT_NAME {
 
         static let BODY                         = "SFPro-Regular"
-        static let CODE                         = "AndaleMono"
+        static let BODY_FALLBACKS               = ["SFProText-Regular",
+                                                   "SFPro-Regular",
+                                                   "PingFangSC-Regular",
+                                                   "HiraginoSans-W3",
+                                                   "HelveticaNeue"]
+        static let CODE                         = "SFMono-Regular"
+        static let CODE_FALLBACKS               = ["SFMono-Regular",
+                                                   "Menlo-Regular",
+                                                   "Menlo",
+                                                   "Monaco",
+                                                   "AndaleMono"]
     }
 
     struct FONT_WEIGHT {
@@ -225,8 +235,8 @@ struct BUFFOON_CONSTANTS {
 
     struct SCALERS {
         
-        static let WINDOW_SIZE_L                = 0.75
-        static let WINDOW_SIZE_M                = 0.50
+        static let WINDOW_SIZE_L                = 0.68
+        static let WINDOW_SIZE_M                = 0.52
         static let WINDOW_SIZE_S                = 0.42
         static let FRONT_MATTER_TEXT            = 0.9
         static let FRONT_MATTER_ROW_HEIGHT      = 1.3
@@ -264,9 +274,6 @@ struct BUFFOON_CONSTANTS {
 
 // FROM 1.3.0
 //static let YAML_INDENT                      = 2
-
-// FROM 1.3.1
-//static let APP_STORE                      = "https://apps.apple.com/us/app/previewmarkdown/id1492280469"
 
 // FROM 1.4.1
 //static let THUMBNAIL_LINE_COUNT             = 40

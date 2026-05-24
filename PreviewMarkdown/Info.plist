@@ -27,7 +27,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2026 Tony Smith. All rights reserved.</string>
+	<string>Original source copyright © 2026 Tony Smith. Licensed under the MIT License.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
@@ -43,7 +43,7 @@
 			<key>NSMessage</key>
 			<string>convertToHtml</string>
 			<key>NSPortName</key>
-			<string>PreviewMarkdown</string>
+			<string>MDLook</string>
 			<key>NSRequiredContext</key>
 			<dict/>
 			<key>NSRestricted</key>
@@ -68,7 +68,7 @@
 			<key>NSMessage</key>
 			<string>convertToPlainText</string>
 			<key>NSPortName</key>
-			<string>PreviewMarkdown</string>
+			<string>MDLook</string>
 			<key>NSRequiredContext</key>
 			<dict/>
 			<key>NSRestricted</key>

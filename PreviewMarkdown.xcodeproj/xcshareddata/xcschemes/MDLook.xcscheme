@@ -15,7 +15,7 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "3BBAEA14236ADEB0009BAA05"
-                     BuildableName = "PreviewMarkdown.app"
+                     BuildableName = "MDLook.app"
                      BlueprintName = "PreviewMarkdown"
                      ReferencedContainer = "container:PreviewMarkdown.xcodeproj">
                   </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3BBAEA14236ADEB0009BAA05"
-               BuildableName = "PreviewMarkdown.app"
+               BuildableName = "MDLook.app"
                BlueprintName = "PreviewMarkdown"
                ReferencedContainer = "container:PreviewMarkdown.xcodeproj">
             </BuildableReference>
@@ -74,7 +74,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3BBAEA14236ADEB0009BAA05"
-            BuildableName = "PreviewMarkdown.app"
+            BuildableName = "MDLook.app"
             BlueprintName = "PreviewMarkdown"
             ReferencedContainer = "container:PreviewMarkdown.xcodeproj">
          </BuildableReference>
@@ -91,7 +91,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3BBAEA14236ADEB0009BAA05"
-            BuildableName = "PreviewMarkdown.app"
+            BuildableName = "MDLook.app"
             BlueprintName = "PreviewMarkdown"
             ReferencedContainer = "container:PreviewMarkdown.xcodeproj">
          </BuildableReference>
